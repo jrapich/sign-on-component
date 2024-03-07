@@ -46,7 +46,7 @@ export default function SignUp() {
 
   return (
     <Container
-      maxWidth={false}
+      maxWidth={"md"}
       disableGutters
       sx={{
         //modal width, height, border
@@ -57,8 +57,9 @@ export default function SignUp() {
         borderBottom: 2,
         p: 0,
         m: 0,
-        height: 820,
-        width: 700,
+        //height: 820,
+        maxHeight: "100%",
+        width: "100%",
       }}
     >
       <Container>
@@ -148,7 +149,9 @@ export default function SignUp() {
             </Box>
           </Box>
           <Box sx={flexCenter}>
-            <Button variant="outlined" onClick={sendToRest}>
+            <Button variant="outlined" onClick={sendToRest} sx={{
+              mb:4,
+            }} >
               SUBMIT
             </Button>
             <Box sx={{ ...flexCenter, mt: 2 }}></Box>
