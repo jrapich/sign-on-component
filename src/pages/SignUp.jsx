@@ -52,23 +52,11 @@ export default function SignUp() {
         borderBottom: 2,
         p: 0,
         m: 0,
-        //height: 820,
         maxHeight: "100%",
         width: "100%",
       }}
     >
       <Container>
-        {/* <Box sx={flexCenter}>
-          <Typography
-            component={"h1"}
-            variant={"h4"}
-            sx={{
-              mt: 4,
-            }}
-          >
-            Certified Dealer Registration
-          </Typography>
-        </Box> */}
         <Box
           sx={{
             ...flexCenter,
