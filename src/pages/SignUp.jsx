@@ -107,6 +107,13 @@ export default function SignUp() {
             </ListItem>
           </List>
         </Box>
+        <Box sx={flexCenter}>
+            <Typography variant="body2">
+              Once our team has reviewed your certification, we will then send you, to the email you provided, 
+              an approved signup link to which you will use to create an account with a username/password. 
+              Our team will also reach out to you with any questions or concerns during the verification process.
+            </Typography>
+          </Box>
         <Divider />
         <Container disableGutters maxWidth={false}>
           <Box sx={{ my: 2 }}>
