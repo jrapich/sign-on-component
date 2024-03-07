@@ -57,8 +57,8 @@ export default function SignUp() {
         borderBottom: 2,
         p: 0,
         m: 0,
-        height: 700,
-        width: 600,
+        height: 820,
+        width: 700,
       }}
     >
       <Container>
@@ -90,7 +90,7 @@ export default function SignUp() {
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>{/* icon here */}</ListItemIcon>
-                <ListItemText primary="Your First and Last Name" />
+                <ListItemText primary="Your First and Last Name/Name of your Dealership" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
@@ -108,12 +108,14 @@ export default function SignUp() {
           </List>
         </Box>
         <Box sx={flexCenter}>
-            <Typography variant="body2">
-              Once our team has reviewed your certification, we will then send you, to the email you provided, 
-              an approved signup link to which you will use to create an account with a username/password. 
-              Our team will also reach out to you with any questions or concerns during the verification process.
-            </Typography>
-          </Box>
+          <Typography variant="body2">
+            Once our team has reviewed your certification, we will then send
+            you, to the email you provided, an approved signup link to which you
+            will use to create an account with a username/password. Our team
+            will also reach out to you with any questions or concerns during the
+            verification process.
+          </Typography>
+        </Box>
         <Divider />
         <Container disableGutters maxWidth={false}>
           <Box sx={{ my: 2 }}>
@@ -121,16 +123,28 @@ export default function SignUp() {
               sx={{
                 pb: 2,
                 display: "flex",
-                justifyContent: "space-between",
+                flexDirection: "column",
               }}
             >
               {/* name */}
-              <TextField label={"First/Last name"} inputRef={nameRef} />
+              <TextField label={"First/Last name"} inputRef={nameRef} sx={{
+                mb: 2,
+              }} />
               {/* email */}
-              <TextField label={"Email"} inputRef={emailRef} />
+              <TextField label={"Email"} inputRef={emailRef} sx={{
+                mb: 2,
+              }} />
+              {/* dealership */}
+              <TextField
+                sx={{
+                  mb: 2,
+                }}
+                label={"Dealership"}
+                inputRef={pdfRef}
+              />
             </Box>
-            <Box>
-              <TextField inputRef={pdfRef} type="file" fullWidth />
+            <Box sx={flexCenter}>
+              <TextField inputRef={pdfRef} type="file" />
             </Box>
           </Box>
           <Box sx={flexCenter}>
