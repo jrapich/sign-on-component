@@ -46,7 +46,7 @@ export default function SignUp() {
 
   return (
     <Container
-      maxWidth={"md"}
+      maxWidth={"sm"}
       disableGutters
       sx={{
         //modal width, height, border
@@ -86,8 +86,8 @@ export default function SignUp() {
             dealer. These requirements are:
           </Typography>
         </Box>
-        <Box sx={{ ...flexCenter, mt: 2 }}>
-          <List>
+        <Box sx={{ ...flexCenter, my: 2,  }}>
+          <List sx={{borderRadius: 4}} >
             <ListItem disablePadding>
               <ListItemButton>
                 <ListItemIcon>{/* icon here */}</ListItemIcon>

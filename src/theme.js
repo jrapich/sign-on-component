@@ -2,36 +2,37 @@ import { createTheme } from "@mui/material/styles";
 
 //color palette object. customize the colors as you see fit
 const colors = {
-  silver: "#c2c2c2",
-  jade: "#5bae6a",
-  airForceBlue: "#597e9b",
-  spaceCadetBlue: "#27293f",
-  raisinBlack: "#181d27",
+  lightSilver: "#ECECEC"
+  //silver: "#c2c2c2",
+  // jade: "#5bae6a",
+  // airForceBlue: "#597e9b",
+  // spaceCadetBlue: "#27293f",
+  // raisinBlack: "#181d27",
 };
 
 // Create our theme palette
 let theme = createTheme({
   palette: {
-    text: {
-      main: colors.jade,
-    },
+    // text: {
+    //   main: colors.jade,
+    // },
     background: {
-      main: colors.spaceCadetBlue,
+      main: colors.lightSilver,
     },
-    primary: {
-      main: colors.airForceBlue,
-      contrastText: colors.jade,
-    },
-    secondary: {
-      main: colors.raisinBlack,
-      contrastText: colors.jade,
-    },
-    tertiary: {
-      main: colors.silver,
-    },
-    accent: {
-      main: colors.jade,
-    },
+    // primary: {
+    //   main: colors.airForceBlue,
+    //   contrastText: colors.jade,
+    // },
+    // secondary: {
+    //   main: colors.raisinBlack,
+    //   contrastText: colors.jade,
+    // },
+    // tertiary: {
+    //   main: colors.silver,
+    // },
+    // accent: {
+    //   main: colors.jade,
+    // },
   },
 });
 
@@ -41,10 +42,32 @@ theme = createTheme(theme, {
     MuiCssBaseline: {
       styleOverrides: {
         body: {
-          // backgroundColor: theme.palette.background.main,
+          backgroundColor: theme.palette.background.main, 
           // color: theme.palette.text.main,
         },
       },
+    },
+    MuiButton: {
+      styleOverrides:{
+        root: {
+          backgroundColor: "whitesmoke",
+        }
+      }
+    },
+    MuiTextField: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "whitesmoke",
+          borderColor: "black",
+        }
+      }
+    },
+    MuiList: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "whitesmoke",
+        }
+      }
     },
     // MuiToolbar: {
     //   styleOverrides: {
