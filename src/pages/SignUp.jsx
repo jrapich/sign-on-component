@@ -6,7 +6,10 @@ import {
   ListItem,
   ListItemIcon,
   ListItemButton,
-  ListItemText
+  ListItemText,
+  TextField,
+  Divider,
+  Button,
 } from "@mui/material";
 
 const flexCenter = {
@@ -60,30 +63,50 @@ export default function SignUp() {
           <List>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {/* icon here */}
-                </ListItemIcon>
+                <ListItemIcon>{/* icon here */}</ListItemIcon>
                 <ListItemText primary="Your First and Last Name" />
               </ListItemButton>
             </ListItem>
             <ListItem disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {/* icon here */}
-                </ListItemIcon>
+                <ListItemIcon>{/* icon here */}</ListItemIcon>
                 <ListItemText primary="Primary Email Address you use with your dealership" />
               </ListItemButton>
             </ListItem>
-            <ListItem disablePadding >
+            <ListItem disablePadding>
               <ListItemButton>
-                <ListItemIcon>
-                  {/* email icon */}
-                </ListItemIcon>
+                <ListItemIcon>{/* email icon */}</ListItemIcon>
                 <ListItemText primary="Primary dealership certificate from your associated vehicle manufacturer, in PDF form" />
               </ListItemButton>
             </ListItem>
           </List>
         </Box>
+        <Divider />
+        <Container disableGutters maxWidth={false}>
+          <Box sx={{my: 2 }}>
+            <Box
+              sx={{
+                pb: 2,
+                display: "flex",
+                justifyContent:"space-between"
+              }}
+            >
+              {/* name */}
+              <TextField label={"First/Last name"}  />
+              {/* email */}
+              <TextField label={"Email"} />
+            </Box>
+
+            <Box>
+              <TextField label={"certificate PDF"} fullWidth />
+            </Box>
+          </Box>
+          <Box sx={flexCenter}>
+              <Button variant="outlined">
+                SUBMIT
+              </Button>
+          </Box>
+        </Container>
       </Container>
     </Container>
   );
