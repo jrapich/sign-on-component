@@ -123,7 +123,7 @@ export default function SignUp() {
               <TextField label={"Email"} inputRef={emailRef} />
             </Box>
             <Box>
-              <TextField label={"certificate PDF"} inputRef={pdfRef} fullWidth />
+              <TextField inputRef={pdfRef} type="file" fullWidth />
             </Box>
           </Box>
           <Box sx={flexCenter}>
