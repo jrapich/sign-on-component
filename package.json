@@ -5,7 +5,7 @@
   "scripts": {
     "build": "cd src/  && vite build",
     "start": "cd src/ && serve dist -s -n -L -p $PORT",
-    "dev": "cd src/ && vite",
+    "dev": "vite --host",
     "lint": "eslint src --ext js,jsx --report-unused-disable-directives --max-warnings 0",
     "preview": "cd src/ && vite preview"
   },
@@ -20,15 +20,17 @@
   },
   "homepage": "https://github.com/jrapich/sign-on-component#readme",
   "dependencies": {
+    "@emotion/react": "^11.11.4",
+    "@emotion/styled": "^11.11.0",
+    "@mui/icons-material": "^5.15.10",
+    "@mui/material": "^5.15.10",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-router-dom": "^6.22.3",
-    "serve": "^14.2.1",
-    "@mui/icons-material": "^5.15.10",
-    "@mui/material": "^5.15.10"
+    "serve": "^14.2.1"
   },
-"devDependencies": {
-  "@types/react": "^18.2.57",
+  "devDependencies": {
+    "@types/react": "^18.2.57",
     "@types/react-dom": "^18.2.19",
     "@vitejs/plugin-react": "^4.2.1",
     "eslint": "^8.56.0",
