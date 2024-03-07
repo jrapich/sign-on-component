@@ -1,0 +1,31 @@
+{
+  "name": "sign-on-component",
+  "version": "1.0.0",
+  "description": "single sign on modal component",
+  "scripts": {
+    "build": "cd portfolio/  && vite build",
+    "start": "cd portfolio/ && serve dist -s -n -L -p $PORT",
+    "dev": "cd portfolio/ && vite",
+    "preview": "cd portfolio/ && vite preview"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jrapich/sign-on-component.git"
+  },
+  "author": "https://github.com/jrapich",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/jrapich/sign-on-component/issues"
+  },
+  "homepage": "https://github.com/jrapich/sign-on-component#readme",
+  "dependencies": {
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "react-router-dom": "^6.22.3",
+    "serve": "^14.2.1"
+  },
+"devDependencies": {
+  "@vitejs/plugin-react": "^4.2.1",
+  "vite": "^5.0.10"
+}
+}
