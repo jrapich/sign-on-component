@@ -11,13 +11,39 @@ import {
   Divider,
   Button,
 } from "@mui/material";
+import { useRef } from "react";
 
+//repeating styles, if any
 const flexCenter = {
   display: "flex",
   justifyContent: "center",
 };
 
 export default function SignUp() {
+  const nameRef = useRef("");
+  const emailRef = useRef("");
+  const pdfRef = useRef("");
+
+  //function to capture and submit data to REST API
+  const sendToRest = async () => {
+    console.log(nameRef.current.value);
+    console.log(emailRef.current.value);
+    console.log(pdfRef.current.value);
+
+    const sendDetails = await fetch("/api/signup/dealer", {
+      method: "POST",
+      body: JSON.stringify({
+        name: nameRef.value,
+        email: emailRef.value,
+        pdf: pdfRef.value,
+      }),
+      headers: { "Content-Type": "application/json" },
+    });
+
+    const response = await sendDetails.json();
+    console.log(response);
+  };
+
   return (
     <Container
       maxWidth={false}
@@ -83,28 +109,28 @@ export default function SignUp() {
         </Box>
         <Divider />
         <Container disableGutters maxWidth={false}>
-          <Box sx={{my: 2 }}>
+          <Box sx={{ my: 2 }}>
             <Box
               sx={{
                 pb: 2,
                 display: "flex",
-                justifyContent:"space-between"
+                justifyContent: "space-between",
               }}
             >
               {/* name */}
-              <TextField label={"First/Last name"}  />
+              <TextField label={"First/Last name"} inputRef={nameRef} />
               {/* email */}
-              <TextField label={"Email"} />
+              <TextField label={"Email"} inputRef={emailRef} />
             </Box>
-
             <Box>
-              <TextField label={"certificate PDF"} fullWidth />
+              <TextField label={"certificate PDF"} inputRef={pdfRef} fullWidth />
             </Box>
           </Box>
           <Box sx={flexCenter}>
-              <Button variant="outlined">
-                SUBMIT
-              </Button>
+            <Button variant="outlined" onClick={sendToRest}>
+              SUBMIT
+            </Button>
+            <Box sx={{ ...flexCenter, mt: 2 }}></Box>
           </Box>
         </Container>
       </Container>
