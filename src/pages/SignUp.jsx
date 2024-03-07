@@ -2,11 +2,6 @@ import {
   Box,
   Container,
   Typography,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemButton,
-  ListItemText,
   TextField,
   Divider,
   Button,
@@ -63,7 +58,7 @@ export default function SignUp() {
       }}
     >
       <Container>
-        <Box sx={flexCenter}>
+        {/* <Box sx={flexCenter}>
           <Typography
             component={"h1"}
             variant={"h4"}
@@ -73,48 +68,17 @@ export default function SignUp() {
           >
             Certified Dealer Registration
           </Typography>
-        </Box>
+        </Box> */}
         <Box
           sx={{
             ...flexCenter,
             mt: 2,
           }}
         >
-          <Typography component={"h2"} variant="h6" sx={{}}>
+          <Typography component={"h2"} variant="h6" align={"center"}>
             To provide the utmost service to our clients and to protect against
             fraud, we have requirements to verify you are a certified vehicle
-            dealer. These requirements are:
-          </Typography>
-        </Box>
-        <Box sx={{ ...flexCenter, my: 2,  }}>
-          <List sx={{borderRadius: 4}} >
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{/* icon here */}</ListItemIcon>
-                <ListItemText primary="Your First and Last Name/Name of your Dealership" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{/* icon here */}</ListItemIcon>
-                <ListItemText primary="Primary Email Address you use with your dealership" />
-              </ListItemButton>
-            </ListItem>
-            <ListItem disablePadding>
-              <ListItemButton>
-                <ListItemIcon>{/* email icon */}</ListItemIcon>
-                <ListItemText primary="Primary dealership certificate from your associated vehicle manufacturer, in PDF form" />
-              </ListItemButton>
-            </ListItem>
-          </List>
-        </Box>
-        <Box sx={flexCenter}>
-          <Typography variant="body2">
-            Once our team has reviewed your certification, we will then send
-            you, to the email you provided, an approved signup link to which you
-            will use to create an account with a username/password. Our team
-            will also reach out to you with any questions or concerns during the
-            verification process.
+            dealer.
           </Typography>
         </Box>
         <Divider />
@@ -128,13 +92,21 @@ export default function SignUp() {
               }}
             >
               {/* name */}
-              <TextField label={"First/Last name"} inputRef={nameRef} sx={{
-                mb: 2,
-              }} />
+              <TextField
+                label={"First/Last name"}
+                inputRef={nameRef}
+                sx={{
+                  mb: 2,
+                }}
+              />
               {/* email */}
-              <TextField label={"Email"} inputRef={emailRef} sx={{
-                mb: 2,
-              }} />
+              <TextField
+                label={"Email"}
+                inputRef={emailRef}
+                sx={{
+                  mb: 2,
+                }}
+              />
               {/* dealership */}
               <TextField
                 sx={{
@@ -145,16 +117,29 @@ export default function SignUp() {
               />
             </Box>
             <Box sx={flexCenter}>
-              <TextField inputRef={pdfRef} type="file" />
+              <TextField inputRef={pdfRef} type="file" fullWidth helperText={"PDF containing your dealership certifcation from your vehicle manufacturer"} />
             </Box>
           </Box>
           <Box sx={flexCenter}>
-            <Button variant="outlined" onClick={sendToRest} sx={{
-              mb:4,
-            }} >
+            <Button
+              variant="outlined"
+              onClick={sendToRest}
+              sx={{
+                mb: 4,
+              }}
+            >
               SUBMIT
             </Button>
             <Box sx={{ ...flexCenter, mt: 2 }}></Box>
+          </Box>
+          <Box sx={flexCenter}>
+            <Typography variant="body2" align={"center"} >
+              Once your info is manually reviewed, we will email to
+              you, an approved signup link to which you will use to create an
+              account with a username/password. Our team will also reach out to
+              you with any questions or concerns during the verification
+              process.
+            </Typography>
           </Box>
         </Container>
       </Container>
