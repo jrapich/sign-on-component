@@ -101,7 +101,7 @@ export default function SignUp() {
               />
               {/* email */}
               <TextField
-                label={"Email"}
+                label={"Valid email"}
                 inputRef={emailRef}
                 sx={{
                   mb: 2,
@@ -112,12 +112,12 @@ export default function SignUp() {
                 sx={{
                   mb: 2,
                 }}
-                label={"Dealership"}
+                label={"Dealership Name"}
                 inputRef={pdfRef}
               />
             </Box>
             <Box sx={flexCenter}>
-              <TextField inputRef={pdfRef} type="file" fullWidth helperText={"PDF containing your dealership certifcation from your vehicle manufacturer"} />
+              <TextField inputRef={pdfRef} type="file" fullWidth helperText={"PDF containing your dealership certification from your vehicle manufacturer"} />
             </Box>
           </Box>
           <Box sx={flexCenter}>
