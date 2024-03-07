@@ -76,9 +76,7 @@ export default function SignUp() {
           }}
         >
           <Typography component={"h2"} variant="h6" align={"center"}>
-            To provide the utmost service to our clients and to protect against
-            fraud, we have requirements to verify you are a certified vehicle
-            dealer.
+            To verify you are a certified vehicle dealer, and to protect against fraud, please submit the following details. 
           </Typography>
         </Box>
         <Divider />
@@ -132,7 +130,7 @@ export default function SignUp() {
             </Button>
             <Box sx={{ ...flexCenter, mt: 2 }}></Box>
           </Box>
-          <Box sx={flexCenter}>
+          <Box sx={{...flexCenter, mb:1}}>
             <Typography variant="body2" align={"center"} >
               Once your info is manually reviewed, we will email to
               you, an approved signup link to which you will use to create an
